@@ -1,0 +1,13 @@
+// Length of string with strlen() fun 
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+   char s[]="programming is fun";
+   int ans=0;
+   ans=strlen(s);
+    printf("Length of string is %d ",ans);
+    
+    return 0;
+}
+

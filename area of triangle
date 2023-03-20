@@ -1,0 +1,15 @@
+//area of triangle
+#include <stdio.h>
+
+int main()
+{
+    int breath,height; 
+    printf("****Area Of Triangle****\n");
+    printf("enter breath of triangle:\n");
+    scanf("%d",&breath);
+    printf("enter height of triangle:\n");
+    scanf("%d",&height);
+    
+    printf("the area of triangle is %d", (breath*height)/2);
+    return 0;
+}

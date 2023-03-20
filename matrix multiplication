@@ -1,0 +1,59 @@
+//2_matrix multiplication
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX][MAX],b[MAX][MAX],product[MAX][MAX];
+    int i,j,k,sum=0;
+    int arows,acolumns,brows,bcolumns;
+    
+    printf("enter the no. of elements of Matrix a:\n");
+    scanf("%d%d", &arows,&acolumns);
+    
+    printf("enter the no. of elements of Matrix b:\n");
+    scanf("%d%d", &brows,&bcolumns);
+    
+    if(acolumns!=brows)
+        printf("Sorry!,Matrix multiplication for matrices a and b is not possible.\n");
+    else{
+        printf("enter the elements of Matrix a:\n");
+        for(i=0;i<arows;i++){
+            for(j=0;j<acolumns;j++){
+                scanf("%d",&a[i][j]);
+            }
+        }
+        printf("enter the elements of Matrix b:\n");
+        for(i=0;i<brows;i++){
+            for(j=0;j<bcolumns;j++){
+                scanf("%d",&b[i][j]);
+            }
+        }
+        
+        
+        printf("\n");
+        for(i=0;i<arows;i++){
+        for(j=0;j<bcolumns;j++){
+            for(k=0;k<brows;k++){
+                sum += a[i][k]*b[k][j];
+            }
+            product[i][j]=sum;
+            sum=0;
+        }
+    }
+    
+    
+    printf("Resultant Matrix:\n");
+    for(i=0;i<arows;i++){
+        for(j=0;j<bcolumns;j++){
+            printf("%d ", product[i][j]);
+        }
+        printf("\n");
+    }
+    }    
+
+    
+
+    
+    return 0;
+}
+

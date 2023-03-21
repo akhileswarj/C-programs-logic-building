@@ -1,0 +1,22 @@
+//area of rectangle using functions
+#include <stdio.h>
+
+int area(int length, int breath){
+    return length*breath;
+}
+
+int main()
+{
+    int length,breath,Area=0; 
+    printf("****Area Of Rectangle****\n");
+    printf("enter length of rectangle:\n");
+    scanf("%d",&length);
+    printf("enter breath of rectangle:\n");
+    scanf("%d",&breath);
+    Area= area(length,breath);
+    
+    printf("the area of rectangle is %d", Area);
+    return 0;
+}
+
+

@@ -1,0 +1,22 @@
+//area of triangle using function
+#include <stdio.h>
+
+int area(int breath, int height){
+    return (breath*height)/2;
+}
+
+int main()
+{
+    int breath,height,Area=0; 
+    printf("****Area Of Triangle****\n");
+    printf("enter breath of triangle:\n");
+    scanf("%d",&breath);
+    printf("enter height of triangle:\n");
+    scanf("%d",&height);
+    
+    Area = area(breath, height);
+    
+    printf("the area of triangle is %d", Area);
+    return 0;
+}
+

@@ -1,0 +1,17 @@
+//celsius to fahrenheit
+#include <stdio.h>
+
+int main()
+{
+    float c,f;
+    printf("***celsius to fahrenheit***\n");
+    printf("enter the temprature in celsius:\n");
+    scanf("%f",&c);
+    
+    f = (c*9/5)+32;
+    printf("the temprature in fahrenheit is %f",f);
+    
+
+    return 0;
+}
+

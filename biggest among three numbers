@@ -1,0 +1,15 @@
+//largest among three numbers 
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c,big;
+    printf("**Largest Of Three***\n");
+    printf("enter three numbers:\n");
+    scanf("%d%d%d", &a,&b,&c);
+    
+    big=(a>b && a>c)? a : (b>c? b : c);
+    printf("the largest among three numbers is %d", big);
+    return 0;
+}
+

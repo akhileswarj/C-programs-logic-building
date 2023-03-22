@@ -1,0 +1,18 @@
+//swapping of two variables
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    printf("***Swaping of two variables***\n");
+    printf("enter two numbers a,b:\n");
+    scanf("%d%d", &a,&b);
+    
+    printf("before swap a,b: %d, %d\n",a,b);
+    a = a+b;
+    b = a-b;
+    a = a-b;
+    printf("after swap a,b: %d, %d\n",a,b);
+    return 0;
+}
+

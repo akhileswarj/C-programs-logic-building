@@ -1,0 +1,21 @@
+//x to the power y (x^y)
+#include <stdio.h>
+
+int main()
+{
+    int i,x,y,result=1;
+    printf("**x to the Power y (x^y)**\n");
+    printf("enter the base number: ");
+    scanf("%d",&x);
+    printf("enter its power: ");
+    scanf("%d",&y);
+    
+    
+    for(i=1;i<=y;i++){
+        result = result*x;
+    }
+    printf("The %d to the power %d is %d", x, y, result);
+
+    return 0;
+}
+

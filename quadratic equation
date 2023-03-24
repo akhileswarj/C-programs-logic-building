@@ -1,0 +1,38 @@
+//quadratic equation
+#include <stdio.h>
+#include<math.h>
+
+int main()
+{
+    float a,b,c,real,img;
+    float p,q,D;
+    printf("**Quadratic Equation Solution**\n");
+    printf("enter the coefficients a,b,c:\n");
+    scanf("%f%f%f", &a,&b,&c);
+    D = (b*b-(4*a*c));
+    
+    if(D>0){
+        printf("the roots are real and distint\n");
+        p = (-b+sqrt(D))/(2*a);
+        q = (-b-sqrt(D))/(2*a);
+        printf("the roots are: %.2f  %.2f \n",p, q);
+    }
+    
+    if(D==0) {
+        printf("the roots are real and equal\n");
+        p = q = -b/(2*a);
+        printf("the roots are: %.2f  %.2f \n",p,q);
+    }
+    
+    if(D<0){
+        printf("the roots are Imaginary\n");
+        real = -b/(2*a);
+        img = (sqrt(-D))/(2*a);
+        printf("the roots are %.2f+i%.2f , %.2f-i%.2f    \n", real, img, real, img);
+    }
+    
+    
+
+    return 0;
+}
+

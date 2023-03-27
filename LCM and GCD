@@ -1,0 +1,31 @@
+//lcm and gcd 
+#include <stdio.h>
+
+int main()
+{
+    int a,b,lcm,gcd,remainder,numarator,denominator;
+    printf("enter two numbers:\n");
+    scanf("%d%d",&a,&b);
+    if(a>b){
+        numarator=a;
+        denominator=b;
+    }
+    else{
+       numarator=b;
+        denominator=a;  
+    }
+    remainder=numarator%denominator;
+    while(remainder!=0)
+    {
+        numarator=denominator;
+        denominator=remainder;
+        remainder=numarator%denominator;
+    }
+    gcd=denominator;
+    lcm=(a*b)/gcd;
+    printf("Gcd of %d, %d is %d\n ",a,b,gcd);
+    printf("Lcm of %d, %d is %d ",a,b,lcm);
+    return 0;
+}
+
+

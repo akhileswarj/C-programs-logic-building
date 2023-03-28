@@ -1,0 +1,26 @@
+//prime factors program
+#include <stdio.h> 
+   
+int main() {  
+    int c, N, i, isPrime;  
+    
+    printf("Enter a Number\n");  
+    scanf("%d", &N);   
+     
+    printf("List of Prime Factors of %d\n", N);  
+    for(c = 2; c <= N; c++) {  
+        if(N%c==0) {
+            isPrime = 1;
+            for(i = 2; i <=(c/2); i++) {
+                if(c%i==0) {
+                    isPrime=0;
+                    break;
+                }
+            }
+            if(isPrime==1)
+                printf("%d ", c);  
+        }  
+    }  
+   
+    return 0;  
+}

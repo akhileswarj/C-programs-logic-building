@@ -1,0 +1,23 @@
+//binary to decimal 
+#include <stdio.h>
+
+int main()
+{
+    int binary,i,rem,decimal=0,weight=1;
+    printf("enter the binary number:\n ");
+    scanf("%d",&binary);
+    
+    while(binary!=0){
+        rem=binary%10;
+        rem=rem*weight;
+        decimal=decimal+rem;
+        weight=weight*2;
+        binary=binary/10;
+    }
+    
+    printf("the decimalNumber is: %d", decimal);
+
+    return 0;
+}
+
+

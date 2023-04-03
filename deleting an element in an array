@@ -1,0 +1,31 @@
+//deleting an element in an array
+#include <stdio.h>
+
+int main()
+{
+    int a[20],n,pos;
+    printf("enter the no. of element of array: ");
+    scanf("%d",&n);
+    printf("enter the elements of array: ");
+    for(int i =0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    printf("Array: ");
+    for(int i = 0; i<n; i++){
+        printf("%d ",a[i]);
+    }
+    printf("\nenter the position of element in array want to delete: ");
+    scanf("%d",&pos);
+    for(int i=pos;i<n;i++){
+        a[i]=a[i+1];
+    }
+    n -= 1;
+    printf("array after deletion: ");
+    for(int i = 0; i<n; i++){
+        printf("%d ",a[i]);
+    }
+
+    return 0;
+}
+
+

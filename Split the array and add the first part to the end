@@ -1,0 +1,40 @@
+//Split the array and add the first part to the end
+#include <stdio.h>
+
+void splitArray(int a[], int n, int k)
+{
+    for(int i = 0; i < k; i++){             //rotating array upto position k
+        
+        //rotating array by 1 time
+        int x = a[0];
+        for(int j=0;j<n;j++){
+            a[j]=a[j+1];
+        }
+        a[n-1]=x;
+    }
+}
+
+int main()
+{
+    int a[50],n,k;
+    printf("enter the no.of elements in array: ");
+    scanf("%d",&n);
+    printf("enter the elements of array: ");
+    for(int i=0;i<n;i++){
+        scanf("%d", &a[i]);
+    }
+    
+    printf("enter the position you want to split and add it to the end: ");
+    scanf("%d",&k);
+    
+    splitArray(a, n, k);
+    
+    printf("\nthe result array is --> ");
+    for(int i=0;i<n;i++){
+        printf("%d ", a[i]);
+    }
+    
+    return 0;
+}
+
+

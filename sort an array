@@ -1,0 +1,40 @@
+//sort an array
+#include <stdio.h>
+
+int main()
+{
+    int a,n,arr[50];
+    printf("enter the no.of elements: ");
+    scanf("%d",&n);
+    printf("enter the elements: ");
+    for(int i=0;i<n;i++)
+        scanf("%d", &arr[i]);
+    
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[i]>arr[j])
+            {
+                a = arr[i];
+                arr[i]=arr[j];
+                arr[j]=a;
+            }
+        }
+    } 
+    
+    printf("the array after sorted in ascending order: ");
+    for(int i=0;i<n;i++){
+        printf("%d ", arr[i]);
+    }
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+

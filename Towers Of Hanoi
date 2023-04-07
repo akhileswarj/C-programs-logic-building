@@ -1,0 +1,21 @@
+//Towers Of Hanoi
+#include<stdio.h>
+
+void towersOfHanoi(int n, char from, char to, char aux)
+{
+    if(n==1)
+    {
+       printf("\nmove disk 1 from %c to %c", from, to);
+       return;
+    }
+    towersOfHanoi(n-1, from, aux, to);
+    printf("\nmove disk %d from %c to %c", n, from, to);
+    towersOfHanoi(n-1, aux, to, from);
+}
+
+int main()
+{
+    int n = 4;          //no of rods
+    towersOfHanoi(n,'A','C','B');
+    return 0;
+}

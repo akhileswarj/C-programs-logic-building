@@ -1,0 +1,34 @@
+//Armstrong numbers between two intervals
+#include <stdio.h>
+#include<math.h>
+
+int main()
+{
+    int low, high,rem,result=0,count,temp,i;
+    printf("enter the intervals(low to high): ");
+    scanf("%d%d", &low, &high);
+    
+    for(i = low+1; i<high; i++)
+    {
+        for(temp=i;temp!=0;count++){
+            temp /= 10;
+        }
+        
+        temp = i;
+        while(temp != 0){
+            rem = temp%10;
+            result += pow(rem,count);
+            temp /= 10;
+        }
+        
+        if(result == i)
+            printf("%d ", i);
+        
+        result = 0;
+        count = 0;
+        
+    }
+
+    return 0;
+}
+

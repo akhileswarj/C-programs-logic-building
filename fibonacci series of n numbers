@@ -1,0 +1,22 @@
+//fibonacci series of n numbers 
+#include<stdio.h>
+void main()
+{
+  long i,n,a=0,b=1,c=a+b;
+  printf("enter no.of terms n: ");
+  scanf("%ld",&n);
+  printf("fibonacci series: ");
+  for(i=1;i<=n;i++)
+  {
+      printf("%ld ",a);
+      c=a+b;
+      a=b;
+      b=c;
+      
+  }
+  
+}
+
+
+
+

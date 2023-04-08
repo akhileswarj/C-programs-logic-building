@@ -1,0 +1,39 @@
+//disarium number
+#include <stdio.h>
+#include<math.h>
+
+int callen (int n)
+{
+  int length = 0;
+  while (n > 0){
+      length++;
+      n = n / 10;
+    }
+  return length;
+}
+
+int main ()
+{
+  int n, sum = 0, rem = 0, len;
+  printf ("enter the number: ");
+  scanf ("%d", &n);
+
+  len = callen (n);
+  int num = n;
+  while (n != 0)
+    {
+      rem = n % 10;
+      sum += pow (rem, len);
+      n = n / 10;
+      len--;
+    }
+
+  if (sum == num)
+    printf ("%d is a disarium number.", num);
+  else
+    printf ("%d is not a disarium number.", num);
+
+
+  return 0;
+}
+

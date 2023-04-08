@@ -1,0 +1,24 @@
+//count blanks, tabs, newlines
+#include <stdio.h>
+
+int main()
+{
+    int blank = 0, tab = 0, newline = 0;
+    int c;
+    printf("input few words/tabs/newlines: \n");
+    
+    for(; (c=getchar()) != EOF; )
+    {
+        if(c == ' ') 
+            ++blank;
+        if(c == '\t')
+            ++tab;
+        if(c == '\n')
+            ++newline;
+    }
+    
+    printf("\nblanks = %d, tabs = %d, newlines = %d ", blank, tab, newline);
+
+    return 0;
+}
+

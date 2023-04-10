@@ -1,0 +1,17 @@
+//calculate string length without strlen()
+#include <stdio.h>
+
+int main()
+{
+    char s[50] = "programming is fun";
+    int i=0;
+    // printf("enter a string: ");
+    // fgets(s,sizeof(s),stdin);
+
+    for(i = 0; s[i] != '\0'; i++);
+    
+    printf("the length of string is %d ", i);
+
+    return 0;
+}
+

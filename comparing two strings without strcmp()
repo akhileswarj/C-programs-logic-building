@@ -1,0 +1,43 @@
+//comparing two strings without strcmp()
+#include <stdio.h>
+int stringcompare(char[], char[]);
+
+int main()
+{
+    char s1[50],s2[50];
+    printf("enter the first string: ");
+    fgets(s1,sizeof(s1),stdin);
+    printf("enter the second string: ");
+    fgets(s2,sizeof(s2),stdin);
+    
+    int res = stringcompare(s1,s2);
+    
+    if(res == 0)
+        printf("\nthe strings %s and %s are same", s1, s2);
+    else
+        printf("\nthe strings %s and %s are not same", s1, s2);
+
+    return 0;
+}
+
+int stringcompare(char s1[], char s2[])
+{
+    int flag=0,i=0;
+    while(s1[i]!='\0' && s2[i]!='\0')
+    {
+        
+        if(s1[i] != s2[i]){
+            flag = 1;
+            break;
+        }
+        
+        i++;
+    }
+    
+    if(flag==0)
+        return 0;
+    else
+        return -1;
+}
+
+

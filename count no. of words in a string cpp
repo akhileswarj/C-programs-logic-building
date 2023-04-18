@@ -1,0 +1,24 @@
+/*C++ program to count no. of words in a string*/
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char str[50];
+    int i,count = 0;
+    cout<<"enter the string: "<<endl;
+    fgets(str,sizeof(str),stdin);                       //OR scanf("%[^\n]s", &str); 
+    
+    for(i=0; str[i] != '\0'; i++)                       //OR for(i=0; str[i]; i++)
+    {
+        if(str[i] == 32)                                //OR  if(str[i] == ' ')
+            count++;
+            
+    }
+    if(i>0)
+        count++;
+    cout<<"the no of words in the string is "<<count<<endl;
+
+    return 0;
+}
+

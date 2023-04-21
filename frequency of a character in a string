@@ -1,0 +1,24 @@
+/*find the frequency of a character in a string*/
+#include <stdio.h>
+
+int main()
+{
+    printf("***finding the frequency of a character in a string***\n");
+    char s[100];
+    char c;
+    int count=0;
+    printf("enter the string: ");
+    fgets(s, sizeof(s), stdin);
+    printf("enter the character: ");
+    scanf("%c", &c);
+    
+    for(int i = 0; s[i] != '\0'; i++)
+    {
+        if(s[i] == c)
+            count++;
+    }
+    printf("the frequency of the %c in the string is %d ", c, count);
+
+    return 0;
+}
+

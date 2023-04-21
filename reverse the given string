@@ -1,0 +1,24 @@
+/*reverse the given string*/
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char s[50],temp;
+    printf("enter the string: ");
+    fgets(s, sizeof(s), stdin);
+    int l;
+    
+    l = strlen(s) - 1;
+    
+    for(int i=0; i < strlen(s)/2; i++,l--){
+        temp = s[i];
+        s[i] = s[l];
+        s[l] = temp;
+    }
+    
+    printf("the reversed string: %s", s);
+
+    return 0;
+}
+

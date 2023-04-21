@@ -1,0 +1,27 @@
+/*Remove characters in string except alphabets*/
+#include <stdio.h>
+
+int main()
+{
+    char s[100];
+    int i, j;
+    printf("***Remove characters in string except alphabets***\n");
+    printf("enter the string: ");
+    fgets(s, sizeof(s), stdin);
+    
+    for(i = 0; s[i] != '\0'; i++)
+    {
+        while(!(s[i] >= 'a' && s[i] <= 'z') && !(s[i] >= 'A' && s[i] <= 'Z') && s[i] != '\0'){
+            for(j = i; s[j] != '\0'; j++){
+                s[j] = s[j + 1];
+            }
+            s[j] = '\0';
+        }
+    }
+    
+    puts(s);
+    // OR  printf("output string : %s\n", s);                  //difference is in printf \n should be kept by us
+
+    return 0;
+}
+

@@ -1,0 +1,29 @@
+/* C Program to sort a string in alphabetical order*/
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char s[50];
+    int slen= 0;
+    char temp;
+    printf("enter a string: ");
+    fgets(s, sizeof(s), stdin);
+    slen = strlen(s);
+    
+    for(int i = 0; i < slen; i++){
+        for(int j = i+1; j < slen; j++){
+            if(s[i] > s[j]){
+                temp = s[i];
+                s[i] = s[j];
+                s[j] = temp;
+            }
+        }
+    }
+    
+    printf("the sorted string is: %s", s);
+
+    return 0;
+}
+
+

@@ -1,0 +1,45 @@
+/*sorting integer array using pointers*/
+#include <stdio.h> 
+#include <stdlib.h>
+  
+// Function to sort the numbers using pointers 
+void sort(int *ptr, int n) 
+{ 
+    int i, j, t; 
+  
+    // Sort the numbers using pointers 
+    for (i = 0; i < n; i++) { 
+  
+        for (j = i + 1; j < n; j++) { 
+  
+            if (*(ptr + j) < *(ptr + i)) { 
+                t = *(ptr + i); 
+                *(ptr + i) = *(ptr + j); 
+                *(ptr + j) = t; 
+            } 
+        } 
+    } 
+  
+    // print the numbers 
+    for (i = 0; i < n; i++) 
+        printf("%d ", *(ptr + i)); 
+} 
+  
+// Driver code 
+int main() 
+{ 
+    int n, *ptr;
+    printf("enter the size of array: ");
+    scanf("%d", &n);
+    
+    ptr = (int *)malloc(n * sizeof(int));
+    
+    printf("enter the elements of array: ");
+    for(int i = 0; i<n; i++){
+        scanf("%d", (ptr + i));
+    }
+    
+    sort(ptr, n);
+  
+    return 0; 
+}

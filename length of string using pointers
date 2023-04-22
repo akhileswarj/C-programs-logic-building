@@ -1,0 +1,23 @@
+/*length of string using pointers*/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char str[50], *ptr;
+    int len = 0;
+    
+    printf("enter the string: ");
+    fgets(str, sizeof(str), stdin);
+    ptr = str;
+    
+    while(*ptr != '\0'){
+        len++;
+        ptr++;
+    }
+    printf("length of string: %d ", len - 1);
+
+    return 0;
+}
+
+

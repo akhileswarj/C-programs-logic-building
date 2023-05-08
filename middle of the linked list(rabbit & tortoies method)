@@ -1,0 +1,60 @@
+/*middle of the linked list(rabbit & tortoies method)*/
+#include <stdio.h>
+#include<stdlib.h>
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+
+void middleOfLinkedlist(struct node *head)
+{
+    struct node *fast = head;
+    struct node *slow = head;
+    while(fast != NULL && fast->next != NULL)
+    {
+        fast = fast->next->next;
+        slow = slow->next;
+    }
+    printf("\nthe middle element is %d", slow->data);
+}
+
+int main()
+{
+    struct node *head = (struct node*)malloc(sizeof(struct node*));
+    struct node *first = (struct node*)malloc(sizeof(struct node*));
+    struct node *s = (struct node*)malloc(sizeof(struct node*));
+    struct node *t = (struct node*)malloc(sizeof(struct node*));
+    struct node *fo = (struct node*)malloc(sizeof(struct node*));
+    struct node *fi = (struct node*)malloc(sizeof(struct node*));
+    struct node *six = (struct node*)malloc(sizeof(struct node*));
+    
+    head = first;
+    first->data = 10;
+    s->data = 20;
+    t->data = 30;
+    fo->data = 40;
+    fi->data = 50;
+    six->data = 60;
+    first->next = s;
+    s->next = t;
+    t->next = fo;
+    fo->next = fi;
+    fi->next = six;
+    six->next = NULL;
+    
+    struct node *p = head;
+    printf("\nthe elements are: ");
+    while(p != NULL)
+    {
+        printf("%d ", p->data);
+        p = p->next;
+    }
+    middleOfLinkedlist(head);
+
+
+    return 0;
+}
+
+

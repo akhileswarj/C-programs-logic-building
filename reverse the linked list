@@ -1,0 +1,75 @@
+/*reverse the linked list*/
+#include <stdio.h>
+#include<stdlib.h>
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+
+void printList(struct node **head)
+{
+    struct node *p = *head;
+    printf("\nthe elements are: ");
+    while(p != NULL)
+    {
+        printf("%d ", p->data);
+        p = p->next;
+    }
+}
+
+struct node* reverseList(struct node **head)
+{
+    struct node *prev = NULL;
+    struct node *current = *head;
+    struct node *next;
+    
+    while(current != NULL)
+    {
+        next = current->next;
+        current->next = prev;
+        
+        prev = current;
+        current = next;
+    }
+    *head = prev;
+    printf("\nLinkedlist reversed successfully.");
+    return *head;
+}
+
+int main()
+{
+    struct node *head = (struct node*)malloc(sizeof(struct node*));
+    struct node *first = (struct node*)malloc(sizeof(struct node*));
+    struct node *s = (struct node*)malloc(sizeof(struct node*));
+    struct node *t = (struct node*)malloc(sizeof(struct node*));
+    struct node *fo = (struct node*)malloc(sizeof(struct node*));
+    struct node *fi = (struct node*)malloc(sizeof(struct node*));
+    struct node *six = (struct node*)malloc(sizeof(struct node*));
+    
+    head = first;
+    first->data = 10;
+    s->data = 20;
+    t->data = 30;
+    fo->data = 40;
+    fi->data = 50;
+    six->data = 60;
+    first->next = s;
+    s->next = t;
+    t->next = fo;
+    fo->next = fi;
+    fi->next = six;
+    six->next = NULL;
+    
+    printList(&head);
+    reverseList(&head);
+    printList(&head);
+    
+
+
+    return 0;
+}
+
+
+
